@@ -55,7 +55,50 @@ bool gameover()
 {
 	//TODO: Implement this method,verify if any player has won the match of it's being a tie.
 	//Return true if the game is over. Print message informing the user about what just happened.
-	return false;
+
+	if((board[0][0] == 'X' && board[0][0] == board[0][1] && board[0][1] == board[0][2]) ||
+			(board[0][0] == 'O' && board[0][0] == board[0][1] && board[0][1] == board[0][2])){
+		cout << "The player " << player << " has lost.!!!" << endl;
+		return true;
+	}
+	else if ((board[1][0] == 'X' && board[1][0] == board[1][1] && board[1][1] == board[1][2]) ||
+			(board[1][0] == 'O' && board[1][0] == board[1][1] && board[1][1] == board[1][2])){
+		cout << "The player " << player << " has lost.!!!" << endl;
+		return true;
+	}
+	else if ((board[2][0] == 'X' && board[2][0] == board[2][1] && board[2][1] == board[2][2]) ||
+				(board[2][0] == 'O' && board[2][0] == board[2][1] && board[2][1] == board[2][2])){
+		cout << "The player " << player << " has lost.!!!" << endl;
+		return true;
+	}
+	else if ((board[0][0] == 'X' && board[0][0] == board[1][0] && board[1][0] == board[2][0]) ||
+				(board[0][0] == 'O' && board[0][0] == board[1][0] && board[1][0] == board[2][0])){
+		cout << "The player " << player << " has lost.!!!" << endl;
+		return true;
+	}
+	else if ((board[0][1] == 'X' && board[0][1] == board[1][1] && board[1][1] == board[2][1]) ||
+					(board[0][1] == 'O' && board[0][1] == board[1][1] && board[1][1] == board[1][1])){
+		cout << "The player " << player << " has lost.!!!" << endl;
+		return true;
+	}
+	else if ((board[0][2] == 'X' && board[0][2] == board[1][2] && board[1][2] == board[2][2]) ||
+				(board[0][2] == 'O' && board[0][2] == board[1][2] && board[1][2] == board[2][2])){
+		cout << "The player " << player << " has lost.!!!" << endl;
+		return true;
+	}
+	else if ((board[2][0] == 'X' && board[2][0] == board[1][1] && board[1][1] == board[0][2]) ||
+				(board[2][0] == 'O' && board[2][0] == board[1][1] && board[1][1] == board[0][2])){
+		cout << "The player " << player << " has lost.!!!" << endl;
+		return true;
+	}
+	else if ((board[0][0] == 'X' && board[0][0] == board[1][1] && board[1][1] == board[2][2]) ||
+					(board[0][0] == 'O' && board[0][0] == board[1][1] && board[1][1] == board[2][2])){
+			cout << "The player " << player << " has lost.!!!" << endl;
+			return true;
+		}
+	else {
+		return false;
+	}
 }
 
 bool isValidInput(istream& in){
